@@ -87,12 +87,6 @@ netsh advfirewall firewall dump
 netsh firewall show state
 ```
 
----
-
-## 🎧 **Start a Reverse Shell Listener**
-```bash
-nc -lvp 443
-```
 
 ---
 
