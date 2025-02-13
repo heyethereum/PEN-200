@@ -9,7 +9,6 @@ sudo openvpn universal.ovpn
 ---
 
 ## 🔍 **Scanning and Web Enumeration**
-```
 ### **Start a Web Server**
 ```bash
 python3 -m http.server 80
