@@ -1,4 +1,4 @@
-# Commonly Reverse Shell Commands
+# Common Reverse Shell Commands
 
 ---
 
