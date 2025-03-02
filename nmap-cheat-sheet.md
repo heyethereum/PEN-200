@@ -1,9 +1,11 @@
 # Nmap Cheat Sheet: Reconnaissance & Vulnerability Scanning
 
 ## Update Script Database
+https://nmap.org/nsedoc/categories/vuln.html
+Scripts are located at /usr/share/nmap/scripts
 
 ```bash
-# Quick initial recon scan
+# Update script db
 sudo nmap --script-updatedb
 ```
 
