@@ -1,5 +1,12 @@
 # Nmap Cheat Sheet: Reconnaissance & Vulnerability Scanning
 
+## Update Script Database
+
+```bash
+# Quick initial recon scan
+sudo nmap --script-updatedb
+```
+
 ## Basic Scanning Techniques
 
 | Command | Description |
