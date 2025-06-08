@@ -61,3 +61,35 @@ This cheat sheet lists commonly used TCP/UDP ports for Linux and Windows environ
 ---
 
 ✅ **Tip**: Always audit which services are bound to open ports and restrict them by IP/firewall when possible.
+
+## Common Windows Ports and Vulnerbilities 
+
+### <span style="color:deepskyblue">FTP</span> <span style="color:orange">(Port 21)</span>
+<span style="color:white">Microsoft FTP Server</span> — <span style="color:red">could allow file access!</span>
+
+### <span style="color:mediumpurple">DNS</span> <span style="color:orange">(Port 53)</span>
+<span style="color:white">Simple DNS Plus</span> — <span style="color:red">could leak internal info</span>
+
+### <span style="color:darkorange">Kerberos</span> <span style="color:orange">(Port 88)</span>
+<span style="color:white">Important for Windows authentication</span> — <span style="color:red">target for attacks like Kerberoasting</span>
+
+### <span style="color:goldenrod">RPC</span> <span style="color:orange">(Port 135)</span>
+<span style="color:white">Windows Remote Procedure Call</span> — <span style="color:yellow">can enumerate services</span>
+
+### <span style="color:mediumseagreen">NetBIOS</span> <span style="color:orange">(Port 139)</span>
+<span style="color:white">Used for file/printer sharing</span> — <span style="color:red">could lead to info leaks</span>
+
+### <span style="color:crimson">LDAP</span> <span style="color:orange">(Port 389, 3268)</span>
+<span style="color:white">Active Directory</span> — <span style="color:red">critical for domain attacks!</span>
+
+### <span style="color:sienna">SMB</span> <span style="color:orange">(Port 445)</span>
+<span style="color:white">File sharing</span> — <span style="color:red">commonly exploited</span>
+
+### <span style="color:steelblue">HTTP</span> <span style="color:orange">(Ports 5985, 47001)</span>
+<span style="color:white">Windows Remote Management over HTTP</span>
+
+### <span style="color:orchid">.NET Message</span> <span style="color:orange">(Port 9389)</span>
+<span style="color:white">Might be related to WCF services</span> — <span style="color:red">could be abused</span>
+
+### <span style="color:gray">Other Ports</span> <span style="color:orange">(464, 593, 636, 3269)</span>
+<span style="color:white">Various Windows services tied to Active Directory and secure communication</span>
