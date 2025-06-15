@@ -94,3 +94,18 @@ ssh -i /path/to/private_key.pem username@10.129.226.117
 # Run a single command over SSH
 ssh username@10.129.226.117 'ls -la /var/www/html'
 ```
+
+### 📡 Checking Open Ports with `ss`
+```bash
+# List all listening TCP ports
+ss -tln
+
+# Breakdown:
+# -t : TCP sockets
+# -l : Listening sockets
+# -n : Show port numbers (no DNS resolution)
+
+# Example output:
+# State     Recv-Q     Send-Q         Local Address:Port        Peer Address:Port
+# LISTEN    0          128            0.0.0.0:22                0.0.0.0:*
+```
