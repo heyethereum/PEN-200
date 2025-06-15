@@ -93,6 +93,14 @@ ssh -i /path/to/private_key.pem username@10.129.226.117
 
 # Run a single command over SSH
 ssh username@10.129.226.117 'ls -la /var/www/html'
+
+# Local Port Forwarding
+# Forwards localhost:8080 to target:80 via SSH tunnel
+ssh -L 8080:target.internal:80 username@10.129.226.117
+
+# Remote Port Forwarding
+# Opens port 9090 on the remote server and sends it to your local port 3000
+ssh -R 9090:localhost:3000 username@10.129.226.117
 ```
 
 ### 📡 Checking Open Ports with `ss`
