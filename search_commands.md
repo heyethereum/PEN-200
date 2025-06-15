@@ -31,6 +31,17 @@
 
 ---
 
+### 🖥 CMD (Windows Command Prompt)
+
+| Task                        | Command Example                                          |
+|-----------------------------|----------------------------------------------------------|
+| Find all `.txt` files       | `dir /s /b *.txt`                                        |
+| Search specific folder      | `dir C:\\Users\\mike\\Desktop\\*.txt /s /b`              |
+| Search by part of name      | `dir /s /b | findstr flag`                               |
+| Search whole drive          | `dir C:\\ /s /b | findstr flag.txt`                      |
+| Redirect errors             | `dir /s /b *.txt 2>nul`          
+---
+
 ### 📝 Notes
 - PowerShell `find` is **not** like Linux `find`; it searches **text inside files**.
 - Use `gci` (`Get-ChildItem`) for file discovery in PowerShell.
