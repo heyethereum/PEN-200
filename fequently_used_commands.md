@@ -117,3 +117,23 @@ ss -tln
 # State     Recv-Q     Send-Q         Local Address:Port        Peer Address:Port
 # LISTEN    0          128            0.0.0.0:22                0.0.0.0:*
 ```
+
+### 🧾 SMB Enumeration with `smbclient`
+```bash
+# List available shares on target (anonymous login)
+smbclient -L //10.129.226.117/ -N
+
+# Connect to a specific share anonymously
+smbclient //10.129.226.117/share_name -N
+
+# Connect with username and password
+smbclient //10.129.226.117/share_name -U username
+
+# Example usage inside smbclient:
+# smb: \> ls
+# smb: \> get filename.txt
+# smb: \> put exploit.sh
+
+# Download a file without entering interactive mode
+smbclient //10.129.226.117/share_name -N -c 'get secrets.txt'
+```
