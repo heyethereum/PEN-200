@@ -85,3 +85,6 @@ class User(Named, WithEmail):
 bob = User()
 bob.reset()
 print([bob.uuid, bob.name, bob.email])
+
+mid = (3+4) //2
+print(mid)

