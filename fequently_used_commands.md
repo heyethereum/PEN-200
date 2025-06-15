@@ -57,8 +57,8 @@ Then on the target:
 
 ### 🛠️ Hydra Brute-Force Examples
 ```bash
-# SSH Brute Force
-hydra -l root -P /usr/share/wordlists/rockyou.txt ssh://10.129.54.238
+# SSH login
+hydra -L usernames.txt -P password.txt 10.129.226.117 ssh 
 
 # HTTP Basic Auth Brute Force
 hydra -L users.txt -P passwords.txt 10.129.54.238 http-get /admin
@@ -78,4 +78,19 @@ ls
 
 # Downloading a file
 get filename.txt
+```
+
+### 🔐 SSH Usage Basics
+```bash
+# Connect to SSH server
+ssh username@10.129.226.117
+
+# Use custom port (if not default 22)
+ssh -p 2222 username@10.129.226.117
+
+# Use private key for authentication
+ssh -i /path/to/private_key.pem username@10.129.226.117
+
+# Run a single command over SSH
+ssh username@10.129.226.117 'ls -la /var/www/html'
 ```
